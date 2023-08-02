@@ -1,0 +1,23 @@
+<app-header titulo="Asistencia"></app-header>
+
+<ion-content>
+  <div class="fondo">
+  <ion-card  class="recu">
+      
+    
+    <ion-card-header>
+      <ion-card-title color="duoc" >Leer Qr</ion-card-title>
+      
+    </ion-card-header>
+      
+      <ion-input type="text"  [(ngModel)]="tomaqr" placeholder="Ingrese el codigo de su clase "></ion-input>
+      
+      <ion-button (click)="marcarAsistencia()" *ngIf="isDisabled == true" color="duoc">Asistir</ion-button>
+
+      <ion-button color="duoc"  *ngIf="isDisabled == true">Escanear Qr</ion-button>
+      
+    
+  </ion-card>
+
+</div>
+</ion-content>

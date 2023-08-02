@@ -1,0 +1,57 @@
+<app-header titulo="Perfil"></app-header>
+
+<ion-content>
+
+    <div class="fondo">
+      <ion-card>
+        <ion-card-header >
+          <ion-card-title color="duoc" >PERFIL Duoc UC</ion-card-title>
+          <hr>
+          <img *ngIf="usuariolog.tipo_usuario == 'Alumno'" class="fotis" src="../../../assets/img/icons8-cat-profile-100.png" />
+          <img *ngIf="usuariolog.tipo_usuario == 'Docente'" class="fotis" src="../../../assets/img/icons8-panda-100.png" />
+          <img *ngIf="usuariolog.tipo_usuario == 'Administrador'" class="fotis" src="../../../assets/img/icons8-bull-100.png" />
+          <ion-item>
+            <hr>
+            <ion-card-title color="duoc" >{{usuariolog.nom}} {{usuariolog.ape}}</ion-card-title>
+            
+              
+            
+          </ion-item>
+      </ion-card-header>
+      <ion-list class="coloritem" >
+        <ion-list-header color="duoc" > DATOS PERSONALES </ion-list-header>
+
+
+
+
+        <div> 
+        <ion-item >
+            <p style="color: white;">Nombre: {{usuariolog.nom}}</p>
+        </ion-item>
+        <hr>
+        <ion-item>
+          <p style="color: white;">Apellido: {{usuariolog.ape}}</p>
+      </ion-item>
+        <hr>  
+        <ion-item>
+          <p style="color: white;">Rut: {{usuariolog.rut}}</p> 
+        </ion-item>
+        <hr>
+        <ion-item>
+        <p style="color: white;">  Fecha de Nacimiento: {{usuariolog.fecha_nac}} </p> 
+        </ion-item>
+        <hr>
+        <ion-item>
+        <p *ngIf="usuariolog.tipo_usuario == 'Alumno'" style="color: white;">  Semestre: {{usuariolog.semestre}} </p>
+        <p *ngIf="usuariolog.tipo_usuario == 'Docente'" style="color: white;">  Carrera: {{usuariolog.carrera}} </p>
+        </ion-item>
+        <hr>
+      </div>
+      </ion-list>
+      </ion-card>
+    </div>
+</ion-content>
+
+
+
+
